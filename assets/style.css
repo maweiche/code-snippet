@@ -1,0 +1,154 @@
+:root {
+    --pink:rgba(232, 102, 236, 1);
+    --black: black;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+header {
+    text-align: center;
+    width: 96%;
+    padding: 2.5rem;
+    margin: 0 auto;
+}
+
+h1{
+    color: var(--pink);
+}
+
+header > p {
+    color: white;
+}
+
+main {
+    width:96%;
+    margin: 2rem auto;
+}
+
+body {
+    /* vertical-align: middle; */
+    background-color: gray;
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-left: -1.5rem;
+    margin-right: -1.5rem;
+}
+.justify-center {
+    justify-content: center;
+}
+
+.card-column {
+    flex: 1 0 100%;
+    padding: 1.5rem;
+    transition: flex-basis 500ms linear;
+    margin-bottom: 1.5rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.grid {
+    display: grid;
+    align-items: center;
+    grid-template-columns: repeat(auto-fit, minmax (3, 1fr));
+}
+
+.code-card .card-header {
+    border-radius: 8px;
+    transition: all 0.5s ease-in-out;
+    position: relative;
+    margin: -4rem 0 1.5rem 0;
+    padding: 0.5rem 1rem;
+}
+
+.code-card:hover,
+.code-card:hover .card-header {
+    box-shadow: inset 0px 0px 8px rgba(232, 102, 236, 1), 
+    0 0 15px rgba(232, 102, 236, 1);
+}
+h1 {
+    /* 4rem = 40px (4 * 10px) */
+    font-size: 4rem;
+  }
+  
+  
+  h3 {
+    font-size: 3rem;
+  }
+  
+  p {
+    margin-bottom: 1rem;
+  }
+
+h2 {
+    font-size: 3.5rem;
+    position: relative;
+    margin-top: -20px;
+    border: 2px solid white;
+    border-radius: 8px;
+    z-index: 2;
+    background-color: gray;
+    color: var(--pink);
+}
+
+div{
+    flex: 1 0 100%;
+    padding: 5px 5px;
+    border: 2px dashed white;
+    margin-top: 10px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    margin-left: 10px;
+    color: var(--pink);
+    box-sizing: border-box;
+    transition: flex-basis 500ms linear;
+}
+
+.code-card {
+    padding: 10px 5px;
+    border: 2px solid #bfbfbf;
+    box-sizing:content-box;
+    background-image:linear-gradient(
+        rgba(232, 102, 236, 0.3) 0%,
+        rgba(232, 102, 236, 0.6) 100%
+    );
+    border-radius: 8px;
+    color: white;
+    text-align: left;
+}
+
+code {
+    -webkit-user-select: all;
+    user-select: all;
+
+}
+
+pre {
+    text-align: left;
+}
+
+@media screen and (min-width: 768px) {
+    .snippet {
+        flex: 0 0 50%;
+        max-width: 50%;
+    }
+    .snippet:last-child {
+        flex-grow: 1;
+    }
+}
+
+@media screen and (min-width: 992px) {
+    header {
+        width: 75%;
+    }
+
+    .snippet {
+        flex: 0 0 33.333%;
+        max-width: 33.333%;
+    }
+}
